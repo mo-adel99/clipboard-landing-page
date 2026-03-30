@@ -1,0 +1,72 @@
+.game-over {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.game-over__emoji {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.game-over__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+}
+
+.game-over__leaderboard {
+  width: 100%;
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.game-over__lb-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 8px;
+}
+
+.lb-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.lb-table th, .lb-table td {
+  text-align: center;
+  padding: 4px 8px;
+  color: var(--text);
+}
+
+.lb-table th:first-child, .lb-table td:first-child {
+  text-align: left;
+}
+
+.lb-table th {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.lb-table__me td {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.game-over__actions {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.game-over__actions .btn {
+  flex: 1;
+}

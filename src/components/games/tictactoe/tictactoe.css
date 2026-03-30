@@ -1,0 +1,50 @@
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: min(360px, 90vw);
+  margin: 0 auto;
+}
+
+.ttt-cell {
+  aspect-ratio: 1;
+  background: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+  font-size: clamp(2rem, 8vw, 3.5rem);
+}
+
+.ttt-cell:hover:not(:disabled) {
+  background: var(--surface-hover);
+  border-color: var(--accent);
+  transform: scale(1.04);
+}
+
+.ttt-cell:disabled {
+  cursor: default;
+}
+
+.ttt-cell--x .ttt-symbol {
+  color: var(--player1-color);
+}
+
+.ttt-cell--o .ttt-symbol {
+  color: var(--player2-color);
+}
+
+.ttt-cell--winning {
+  background: var(--win-bg);
+  border-color: var(--win-border);
+  animation: pulse-win 0.4s ease;
+}
+
+@keyframes pulse-win {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}

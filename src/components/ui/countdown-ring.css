@@ -1,0 +1,22 @@
+.countdown-ring {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-ring__label {
+  position: absolute;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-ring--urgent {
+  animation: ring-pulse 0.6s ease infinite alternate;
+}
+
+@keyframes ring-pulse {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
+}
