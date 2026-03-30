@@ -1,0 +1,110 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 48px 16px;
+  min-height: 100vh;
+}
+
+.home-header {
+  text-align: center;
+}
+
+.home-title {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 800;
+  margin: 0;
+  color: var(--text);
+}
+
+.home-sub {
+  margin: 6px 0 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.home-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 28px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.home-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.home-form__label {
+  margin: 0;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.game-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.game-pick-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.game-pick-btn:hover {
+  background: var(--surface-hover);
+}
+
+.game-pick-btn--selected {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.game-pick-btn__emoji {
+  font-size: 1.4rem;
+  margin-bottom: 2px;
+}
+
+.game-pick-btn__name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.game-pick-btn__desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.form-error {
+  margin: 0;
+  color: var(--error);
+  font-size: 0.9rem;
+  background: var(--error-bg);
+  padding: 8px 12px;
+  border-radius: 8px;
+}

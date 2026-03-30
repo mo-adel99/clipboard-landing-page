@@ -1,0 +1,60 @@
+/* ===== Design Tokens ===== */
+:root {
+  /* Colors */
+  --accent:        #7c3aed;
+  --accent-hover:  #6d28d9;
+  --accent-light:  rgba(124, 58, 237, 0.08);
+  --player1-color: #ef4444;
+  --player2-color: #3b82f6;
+  --timer-normal:  #10b981;
+  --timer-urgent:  #ef4444;
+  --win-bg:        rgba(16, 185, 129, 0.15);
+  --win-border:    #10b981;
+  --error:         #ef4444;
+  --error-bg:      rgba(239, 68, 68, 0.1);
+
+  /* Connect4 */
+  --c4-board-bg:   #1e3a8a;
+  --c4-hole-bg:    #0f172a;
+
+  /* Surfaces */
+  --bg:            #0f0f13;
+  --surface:       #1a1a24;
+  --surface-hover: #22223a;
+  --border:        #2e2e44;
+  --text:          #f1f1f5;
+  --text-muted:    #8b8ba7;
+
+  /* Typography */
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  color-scheme: dark;
+}
+
+/* ===== Reset ===== */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+h1, h2, h3, p { margin: 0; }
+button { font-family: inherit; }
+
+#root {
+  min-height: 100vh;
+}
+
+/* Light mode override */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg:            #f8f8fc;
+    --surface:       #ffffff;
+    --surface-hover: #f0f0f8;
+    --border:        #e2e2ee;
+    --text:          #111118;
+    --text-muted:    #6b6b88;
+    --c4-hole-bg:    #e2e8f0;
+    color-scheme: light;
+  }
+}
